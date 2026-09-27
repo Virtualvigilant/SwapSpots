@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import InstallPrompt from "@/components/pwa/install-prompt";
 
@@ -56,6 +57,7 @@ export default function RootLayout({
       <body className="min-h-dvh bg-white antialiased">
         {children}
         <InstallPrompt />
+        <Analytics />
       </body>
     </html>
   );
